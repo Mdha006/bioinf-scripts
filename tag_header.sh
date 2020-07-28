@@ -16,5 +16,5 @@
 for filename in *_L001.filtered.PE150.fastq; do
         temp=(`echo $filename | grep -P -o '^.+_L\d+'`)      
         tag="/1__novis__$temp""454FWD"
-        sed '/^@/s/$/\'$tag'/g' $filename > $filename"_processed"
+        sed '/^@/s/$/\'$tag'/g' $filename > $filename"_processed.fastq"
 done
